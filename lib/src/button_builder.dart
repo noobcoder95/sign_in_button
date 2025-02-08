@@ -68,7 +68,7 @@ class SignInButtonBuilder extends StatelessWidget {
 
   /// The constructor is self-explanatory.
   const SignInButtonBuilder({
-    Key? key,
+    super.key,
     required this.backgroundColor,
     required this.onPressed,
     required this.text,
@@ -88,7 +88,7 @@ class SignInButtonBuilder extends StatelessWidget {
     this.width,
     this.clipBehavior = Clip.none,
     this.textStyle,
-  }) : super(key: key);
+  });
 
   /// The build function will be help user to build the signin button widget.
   @override

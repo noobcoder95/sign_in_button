@@ -43,7 +43,7 @@ class SignInButton extends StatelessWidget {
   /// The constructor is fairly self-explanatory.
   const SignInButton(
     this.button, {
-    Key? key,
+    super.key,
     required this.onPressed,
     this.mini = false,
     this.padding = EdgeInsets.zero,
@@ -58,8 +58,7 @@ class SignInButton extends StatelessWidget {
                   button == Buttons.googleDark ||
                   button == Buttons.facebookNew),
           'Google and FacebookNew buttons do not support mini mode',
-        ),
-        super(key: key);
+        );
 
   /// The build function is used to build the widget which will switch to
   /// desired widget based on the enum class `Buttons`
@@ -320,8 +319,7 @@ class SignInButton extends StatelessWidget {
           clipBehavior: clipBehavior,
         );
       case Buttons.email:
-      default:
-        return SignInButtonBuilder(
+      return SignInButtonBuilder(
           elevation: elevation,
           key: const ValueKey('Email'),
           mini: mini,
